@@ -88,7 +88,7 @@ export const RepogroupPage: React.FunctionComponent<RepogroupPageProps> = (props
     }
 
     return (
-        <div className="repogroup-page">
+        <div className="repogroup-page web-content">
             <PageTitle title={props.repogroupMetadata.title} />
             <RepogroupPageLogo
                 className="repogroup-page__logo"
@@ -148,7 +148,7 @@ export const RepogroupPage: React.FunctionComponent<RepogroupPageProps> = (props
                     </div>
                     <div className="order-2-lg order-1-xs">
                         <div className="repogroup-page__repo-card card">
-                            <h2 className="font-weight-normal">
+                            <h2 className="web-content__title">
                                 <SourceRepositoryMultipleIcon className="icon-inline mr-2" />
                                 Repositories
                             </h2>
@@ -189,7 +189,7 @@ const RepoLink: React.FunctionComponent<{ repo: string }> = ({ repo }) => (
                 <a href={`https://${repo}`} target="_blank" rel="noopener noreferrer">
                     <GithubIcon className="icon-inline repogroup-page__repo-list-icon" />
                 </a>
-                <Link to={`/${repo}`} className="text-monospace repogroup-page__web-link">
+                <Link to={`/${repo}`} className="text-monospace web-content__link">
                     {displayRepoName(repo)}
                 </Link>
             </>
@@ -199,7 +199,7 @@ const RepoLink: React.FunctionComponent<{ repo: string }> = ({ repo }) => (
                 <a href={`https://${repo}`} target="_blank" rel="noopener noreferrer">
                     <GitlabIcon className="icon-inline repogroup-page__repo-list-icon" />
                 </a>
-                <Link to={`/${repo}`} className="text-monospace repogroup-page__web-link">
+                <Link to={`/${repo}`} className="text-monospace web-content__link">
                     {displayRepoName(repo)}
                 </Link>
             </>
@@ -209,7 +209,7 @@ const RepoLink: React.FunctionComponent<{ repo: string }> = ({ repo }) => (
                 <a href={`https://${repo}`} target="_blank" rel="noopener noreferrer">
                     <BitbucketIcon className="icon-inline repogroup-page__repo-list-icon" />
                 </a>
-                <Link to={`/${repo}`} className="text-monospace repogroup-page__web-link">
+                <Link to={`/${repo}`} className="text-monospace web-content__link">
                     {displayRepoName(repo)}
                 </Link>
             </>

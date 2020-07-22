@@ -85,7 +85,7 @@ export const SearchPage: React.FunctionComponent<Props> = props => {
     )
 
     return (
-        <div className="search-page">
+        <div className="web-content search-page">
             <BrandLogo className="search-page__logo" isLightTheme={props.isLightTheme} />
             <div
                 className={classNames('search-page__search-container', {
@@ -115,7 +115,7 @@ export const SearchPage: React.FunctionComponent<Props> = props => {
                                     <div className="d-flex flex-column">
                                         <Link
                                             to={repogroup.url}
-                                            className="search-page__repogroup-listing-title search-page__web-link font-weight-bold"
+                                            className="search-page__repogroup-listing-title web-content__link font-weight-bold"
                                         >
                                             {repogroup.title}
                                         </Link>
@@ -201,7 +201,7 @@ export const SearchPage: React.FunctionComponent<Props> = props => {
                                             .slice(0, Math.ceil(homepageLanguageList.length / 2))
                                             .map(language => (
                                                 <Link
-                                                    className="search-page__web-link search-page__lang-link text-monospace mb-3"
+                                                    className="web-content__link search-page__lang-link text-monospace mb-3"
                                                     to={`/search?q=lang:${language.filterName}`}
                                                     key={language.name}
                                                 >
@@ -217,7 +217,7 @@ export const SearchPage: React.FunctionComponent<Props> = props => {
                                             )
                                             .map(language => (
                                                 <Link
-                                                    className="search-page__web-link search-page__lang-link text-monospace mb-3"
+                                                    className="web-content__link search-page__lang-link text-monospace mb-3"
                                                     to={`/search?q=lang:${language.filterName}`}
                                                     key={language.name}
                                                 >
